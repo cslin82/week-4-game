@@ -20,4 +20,5 @@ jQuery objects needed for all
 * randomInt(min, max) - returns an int between min and max inclusive
 * event listners for click on each crystal
 * win/loss checker
-
+* reset game
+    * re-randomzie crystal and target values
