@@ -5,9 +5,12 @@
 * scoreboard for wins/losses
 * current score
 * target score
-* crystal1, crystal2, crystal3, crystal4
+* crystal1, crystal2, crystal3, crystal4 (or array of crystals 0-3)
 
-jQuery objects needed for all
+jQuery objects needed for all **when are the jQuery objects created? does it all go inside the document ready function block?**
+
+Could we just make the buttons like the refrigerator buttons from the class exercise?
+
 
 ## Variables needed
 
