@@ -12,8 +12,14 @@ function randomInt(min, max) {
 // Fill crystalValues with random from 1 to 12
 crystalValues.length = 4;
 // crystalValues.fill(0);
-
+// could probably use something fancier like map or foreach
 for (let i = 0; i < crystalValues.length; i++) {
     crystalValues[i] = randomInt(1, 12);    
 }
 
+// jQuery main
+$(document).ready(function() {
+
+    console.log( "ready!" );
+
+});
