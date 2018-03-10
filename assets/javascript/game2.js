@@ -27,6 +27,7 @@ function resetGame() {
     targetScore = randomInt(19, 120);
     $('#target-score').text(targetScore);
     $('#current-score').text(currentScore);
+    $('#status-display').html('&nbsp;')
 }
     
 // jQuery main
@@ -34,30 +35,37 @@ $(document).ready(function() {
 
     console.log( "ready!" );
 
-    $('#target-score').click(function() {
-        $(this).text(randomInt(19, 120));   
-    });
-
     $('#start-game').click(function() {
         resetGame();
     });
 
     $('.crystal').click(function() {
         // console.log('crystal score this-attr-value: ' + $(this).attr("value"));
-        console.log('crystal score array: ' + crystalValues[$(this).attr("array-index")]);
-        currentScore += crystalValues[$(this).attr("array-index")];
-        console.log('currentScore: ' + currentScore);
-        $('#current-score').text(currentScore);
-
-        if (currentScore === targetScore) {
-            wins++;
-            alert('win');
-                      
-        } else if (currentScore > targetScore) {
-            losses++;
-            alert('loss');
+        // console.log('crystal score array: ' + crystalValues[$(this).attr("array-index")]);
+        // console.log('currentScore: ' + currentScore);
+        
+        if (gameActive) {
+            currentScore += crystalValues[$(this).attr("array-index")];
+            $('#current-score').text(currentScore);
+            
+            if (currentScore === targetScore) {
+                wins++;
+                // alert('win');
+                $('#status-display').text('You win!')
+                $('#span-wins').text(wins);
+                gameActive = false;
+                
+            } else if (currentScore > targetScore) {
+                losses++;
+                // alert('loss');
+                $('#status-display').text('You lost!')
+                $('#span-losses').text(losses);
+                gameActive = false;
+            }
+        } else {
+            resetGame();
+            gameActive = true;
         }
-
 
 
     });
