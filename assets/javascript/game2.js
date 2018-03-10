@@ -3,6 +3,11 @@
 var currentScore;
 var targetScore;
 var crystalValues = [];
+var gameActive = false;
+var wins = 0;
+var losses = 0;
+
+
 
 // inclusive
 function randomInt(min, max) {
@@ -18,6 +23,10 @@ function resetGame() {
     for (let i = 0; i < crystalValues.length; i++) {
         crystalValues[i] = randomInt(1, 12);    
     }
+    currentScore = 0;
+    targetScore = randomInt(19, 120);
+    $('#target-score').text(targetScore);
+    $('#current-score').text(currentScore);
 }
     
 // jQuery main
@@ -36,5 +45,20 @@ $(document).ready(function() {
     $('.crystal').click(function() {
         // console.log('crystal score this-attr-value: ' + $(this).attr("value"));
         console.log('crystal score array: ' + crystalValues[$(this).attr("array-index")]);
+        currentScore += crystalValues[$(this).attr("array-index")];
+        console.log('currentScore: ' + currentScore);
+        $('#current-score').text(currentScore);
+
+        if (currentScore === targetScore) {
+            wins++;
+            alert('win');
+                      
+        } else if (currentScore > targetScore) {
+            losses++;
+            alert('loss');
+        }
+
+
+
     });
 });
