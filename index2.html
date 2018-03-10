@@ -13,6 +13,12 @@
 <body>
 
     <div class="container">
+        <h1>Crystal Collector</h1>
+        <div id="instructions">
+            <p>
+                
+            </p>
+        </div>
         <div id="scoreboard">
             <h2>Target score: <span id="target-score">target score goes here</span></h2>
             <h2>Current score: <span id="current-score">current score goes here</span></h2>
@@ -21,14 +27,26 @@
         </div>
         <div id="crystals">
                 <ul>
-                    <li> <button type="button" class="crystal crystal-1" array-index="0" value="0">Crystal 1</a> </li>
-                    <li> <button type="button" class="crystal crystal-2" array-index="1" value="0">Crystal 2</a> </li>
-                    <li> <button type="button" class="crystal crystal-3" array-index="2" value="0">Crystal 3</a> </li>
-                    <li> <button type="button" class="crystal crystal-4" array-index="3" value="0">Crystal 4</a> </li>
-                    
+                    <li>
+                        <button type="button" class="crystal crystal-1" array-index="0" value="0">Crystal 1</a>
+                    </li>
+                    <li>
+                        <button type="button" class="crystal crystal-2" array-index="1" value="0">Crystal 2</a>
+                    </li>
+                    <li>
+                        <button type="button" class="crystal crystal-3" array-index="2" value="0">Crystal 3</a>
+                    </li>
+                    <li>
+                        <button type="button" class="crystal crystal-4" array-index="3" value="0">Crystal 4</a>
+                    </li>
+                
                 </ul>
                 <p><button type="button" id="start-game">Start game</button></p>
+                <p><img src="assets/images/crystal1.jpg" alt="Crystal 1" class="crystal-image"></p>
             
+        </div>
+        <div id="status">
+            <h2 id="status-display">...</h2>
         </div>
 
     </div>

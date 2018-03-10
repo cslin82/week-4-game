@@ -61,4 +61,13 @@ $(document).ready(function() {
 
 
     });
+
+    $('.crystal-image').click(function() {
+        alert('image clicked');
+
+    });
+
+
+
+
 });
