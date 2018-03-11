@@ -6,3 +6,4 @@ Using HTML, CSS, and jQuery JavaScript, build a game where the player uses four 
 * The random number shown at the start of the game should be between 19 - 120.
 * Each crystal should have a random hidden value between 1 - 12.
 
+Crystal images from http://www.aha-soft.com http://www.aha-soft.com/free-icons/free-crystal-icons/, Creative Commons

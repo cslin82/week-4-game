@@ -45,7 +45,7 @@ $(document).ready(function() {
         // console.log('currentScore: ' + currentScore);
         
         if (gameActive) {
-            currentScore += crystalValues[$(this).attr("array-index")];
+            currentScore += crystalValues[$(this).attr("data-array-index")];
             $('#current-score').text(currentScore);
             
             if (currentScore === targetScore) {
