@@ -7,6 +7,10 @@ var gameActive = false;
 var wins = 0;
 var losses = 0;
 
+const crystalImages = ["Amber.png", "Amethyst.png", "Aquamarine.png",
+    "Citrine.png", "Diamond-icon.png", "Emerald.png", "Gemstone.png",
+    "Opal.png", "Peridot.png", "Quartz-crystal.png", "Ruby-icon.png",
+    "Sapphire-icon.png", "Topaz-icon.png", "Zircon.png"]
 
 
 // inclusive
@@ -69,13 +73,5 @@ $(document).ready(function() {
 
 
     });
-
-    $('.crystal-image').click(function() {
-        alert('image clicked');
-
-    });
-
-
-
 
 });
