@@ -32,6 +32,8 @@ function resetGame() {
     $('#target-score').text(targetScore);
     $('#current-score').text(currentScore);
     $('#status-display').html('&nbsp;')
+    $('#span-wins').text(wins);
+    $('#span-losses').text(losses);
 }
     
 // jQuery main
